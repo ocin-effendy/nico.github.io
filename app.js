@@ -1,6 +1,5 @@
 var cursor = document.querySelector('.cursor');
 var cursorinner = document.querySelector('.cursor2');
-var a = document.querySelectorAll('a');
 
 document.addEventListener('mousemove', function(e){
   var x = e.clientX;
@@ -22,4 +21,48 @@ document.addEventListener('mousedown', function(){
 
 document.addEventListener('mouseup', function(){
   cursor.classList.remove('click')
+});
+
+
+
+// menu event click
+var expertise = document.querySelector('.expertise');
+var project = document.querySelector('.project');
+var expertiseSection = document.querySelector('.container-expertise')
+
+
+expertise.addEventListener('click', function(){
+  window.scrollTo({
+    top: expertiseSection.getBoundingClientRect().top,
+    behavior: 'smooth'
+  });
+});
+
+
+// expertise
+var arrowRight = document.querySelector('.arrow-right');
+var contentAndroid = document.querySelector('.display-expertise-android');
+var contentFlutter = document.querySelector('.display-expertise-flutter');
+const isHidden = () => contentFlutter.classList.contains("box--hidden");
+contentAndroid.style.display = "none";
+
+
+
+arrowRight.addEventListener("click", function () {
+  if (isHidden()) {
+    contentAndroid.classList.add("box--hidden");
+    contentAndroid.style.display = "none";
+    contentFlutter.style.removeProperty("display");
+    setTimeout(() => {
+      contentFlutter.classList.remove("box--hidden");
+    }, 100);
+  } else {
+    contentFlutter.classList.add("box--hidden");
+    contentFlutter.style.display = "none";
+    contentAndroid.style.removeProperty("display");
+    setTimeout(() => {
+      contentAndroid.classList.remove("box--hidden");
+    }, 100);
+
+  }
 });
