@@ -1,6 +1,10 @@
 var cursor = document.querySelector('.cursor');
 var cursorinner = document.querySelector('.cursor2');
 
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
 document.addEventListener('mousemove', function(e){
   var x = e.clientX;
   var y = e.clientY;

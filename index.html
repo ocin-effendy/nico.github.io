@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
     <title>niikooe</title>
 </head>
@@ -26,14 +27,16 @@
                 </ul>
             </div>
             <div class="hero">
-                <img src="assets/hero.png" alt="logo">
+                <video muted autoplay loop preload="true">
+                    <source src="assets/hero.mp4">
+                </video>
             </div>
             <div class="scroll-text">
                 <p>Scroll down to explore</p>
             </div>
             <div class="hero-text">
-                <h1>hi</h1>
-                <h2>Let's build mobile apps<br/> with flutter and kotlin framework</h2>
+                <h1 data-aos="fade-up" data-aos-duration="1000">hi</h1>
+                <h2 data-aos="fade-up" data-aos-duration="1500">Let's build mobile apps<br/> with flutter and kotlin framework</h2>
             </div>
         </div>
 
@@ -44,10 +47,10 @@
             </div>
             <div class="display-expertise-flutter">
                 <div class="expertise-content">
-                    <div class="expertise-android-text">
-                        <h1 class="title-dev">Multiplatfrom Developer</h1>
-                        <h1 class="desc-dev">Skilled in developing<br/>Multiplatform mobile apps<br/>using the Flutter framework.</h1>
-                        <p>“The Flutter framework is a UI toolkit that helps developers create high-performance, high-fidelity applications for iOS, Android, Linux, Mac, Windows, etc. At its core, it lets developers build an application UI using widgets that have different states and react to specific events.”</p>
+                    <div class="expertise-text">
+                        <h1 class="title-dev" data-aos="fade-up" data-aos-duration="1000">Multiplatfrom Developer</h1>
+                        <h1 class="desc-dev" data-aos="fade-in" data-aos-duration="1500">Skilled in developing<br/>Multiplatform mobile apps<br/>using the Flutter framework.</h1>
+                        <p data-aos="fade-in" data-aos-duration="1000">“The Flutter framework is a UI toolkit that helps developers create high-performance, high-fidelity applications for iOS, Android, Linux, Mac, Windows, etc. At its core, it lets developers build an application UI using widgets that have different states and react to specific events.”</p>
                     </div>
                     <div class="container-image">
                         <div class="character">
@@ -58,7 +61,7 @@
             </div>
             <div class="display-expertise-android box--hidden">
                 <div class="expertise-content">
-                    <div class="expertise-android-text">
+                    <div class="expertise-text">
                         <h1 class="title-dev">Android Developer</h1>
                         <h1 class="desc-dev">Skilled in developing<br/>android mobile apps<br/>using the Kotlin framework.</h1>
                         <p>“Android OS is a Linux-based mobile operating system 
@@ -80,6 +83,10 @@
     </div>
 
     <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     
 </body>
 </html>
