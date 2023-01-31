@@ -14,6 +14,7 @@ body{
 body::-webkit-scrollbar {
     display: none;
 }
+
 .container{
     overflow-x: hidden;
 
@@ -249,6 +250,141 @@ body::-webkit-scrollbar {
 .character img{
     width: 100%;
     height: 100%;
+}
+
+/* project scroll  */
+
+
+.text-project-habit{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    justify-content: center;
+    padding: 0 5rem;
+    width: 50%;
+    position: absolute;
+    color: rgb(221, 221, 221);
+    z-index: 1;
+}
+
+.text-project-habit h1{
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(221, 221, 221);
+}
+
+.text-project-habit p{
+    font-size: 1rem;
+}
+
+.text-project-todolist{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    justify-content: end;
+    padding: 0 5rem;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    color: rgb(221, 221, 221);
+    z-index: 1;
+    text-align: end;
+    transform: translateY(40%);
+}
+
+.text-project-todolist h1{
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(221, 221, 221);
+}
+
+.text-project-todolist p{
+    font-size: 1rem;
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+/* slider */
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }100%{
+        transform: translateX(calc(-10rem * 7));
+    }
+}
+@keyframes scroll1{
+    0%{
+        transform: translateX(0);
+    }100%{
+        transform: translateX(calc(10rem * 7));
+    }
+}
+
+.container-slider{
+    height: 8rem;
+    background-color: rgb(221, 221, 221);
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: auto;
+
+}
+
+.container-slider .slider-track,
+.container-slider .slider-track2{
+    display: flex;
+    width: calc(10rem * 7);
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+.container-slider .slider-track{
+    animation: scroll 40s linear infinite;
+    
+}
+.container-slider .slider-track2{
+    animation: scroll1 40s linear infinite;
+}
+
+.container-slider .slider-track .slide{
+    width: 10rem;
+    margin-right: 5rem;
+}
+
+.container-slider .slider-track2 .slide{
+    width: 10rem;
+    margin-left: 5rem;
+
+}
+.container-slider .slider-track .slide h1,
+.container-slider .slider-track2 .slide h1{
+    color: #1e1e1e;
+}
+
+
+
+/* all project */
+.container-allproject{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(221, 221, 221);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 5rem;
+    color: rgb(221, 221, 221);
 }
 
 /* responsive mode */
