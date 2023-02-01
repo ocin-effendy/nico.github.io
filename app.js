@@ -86,9 +86,11 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const context = canvas.getContext("2d");
-const frameCount = 12;
+// const frameCount = 17;
+const frameCount = 70;
 
-const currentFrame = (index) => `./project-scroll/${(index + 1).toString()}.jpg`;
+// const currentFrame = (index) => `./project-scroll/${(index + 1).toString()}.jpg`;
+const currentFrame = (index) => `./animation project/${(index + 1).toString()}.jpg`;
 
 const images = [];
 let phone = { frame: 0 };
@@ -107,10 +109,66 @@ gsap.to(phone, {
   scrollTrigger: {
     scrub: 0.5,
     pin: "canvas",
-    end: "80%",
+    end: "100%",
   },
   onUpdate: render,
 });
+
+gsap.fromTo(
+  ".text-project-habit",
+  {
+    opacity: 0,
+  },
+  {
+    opacity: 1,
+    scrollTrigger: {
+      scrub: 1,
+      start: "0%",
+      end: "10%",
+    },
+    onComplete: () => {
+      gsap.to(".text-project-habit", { opacity: 1 });
+    },
+  }
+);
+
+gsap.fromTo(
+  ".text-project-habit",
+  {
+    opacity: 1,
+  },
+  {
+    opacity: 0,
+    scrollTrigger: {
+      scrub: 1,
+      start: "50%",
+      end: "0%",
+    },
+    onComplete: () => {
+      gsap.to(".text-project-habit", { opacity: 0 });
+    },
+  }
+);
+
+gsap.fromTo(
+  ".text-project-movie",
+  {
+    opacity: 0,
+  },
+  {
+    opacity: 1,
+    scrollTrigger: {
+      scrub: 1,
+      start: "50%",
+      end: "58%",
+    },
+    onComplete: () => {
+      gsap.to(".text-project-movie", { opacity: 0 });
+    },
+  }
+);
+
+
 
 gsap.fromTo(
   ".text-project-todolist",
@@ -121,7 +179,7 @@ gsap.fromTo(
     opacity: 1,
     scrollTrigger: {
       scrub: 1,
-      start: "50%",
+      start: "60%",
       end: "60%",
     },
     onComplete: () => {

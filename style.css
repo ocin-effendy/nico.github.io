@@ -256,46 +256,26 @@ body::-webkit-scrollbar {
 
 
 .text-project-habit{
-    display: flex;
-    flex-direction: column;
-    width: auto;
-    height: 100%;
-    justify-content: center;
-    padding: 0 5rem;
-    width: 50%;
+    justify-content: start;
+    transform: translateY(30%);
+
     position: absolute;
-    color: rgb(221, 221, 221);
-    z-index: 1;
 }
-
-.text-project-habit h1{
-    font-size: 5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: transparent;
-    -webkit-text-stroke: 1px rgb(221, 221, 221);
-}
-
-.text-project-habit p{
-    font-size: 1rem;
-}
-
+.text-project-habit,
+.text-project-movie,
 .text-project-todolist{
     display: flex;
     flex-direction: column;
-    width: auto;
     height: 100%;
-    justify-content: end;
     padding: 0 5rem;
     width: 50%;
     position: absolute;
-    right: 0;
     color: rgb(221, 221, 221);
     z-index: 1;
-    text-align: end;
-    transform: translateY(40%);
 }
 
+.text-project-habit h1,
+.text-project-movie h1,
 .text-project-todolist h1{
     font-size: 5rem;
     font-weight: 700;
@@ -304,9 +284,44 @@ body::-webkit-scrollbar {
     -webkit-text-stroke: 1px rgb(221, 221, 221);
 }
 
+.text-project-habit p,
+.text-project-movie p,
 .text-project-todolist p{
+    color: rgb(221, 221, 221);
     font-size: 1rem;
 }
+
+.text-project-movie{
+    align-items: flex-end;
+    justify-content: center;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    text-align: end; 
+    transform: translateY(40%);
+}
+.text-project-todolist{
+    justify-content: end;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    transform: translateY(50%);
+}
+
+.habit-button,
+.movie-button,
+.todolist-button{
+    background-color: rgb(221, 221, 221);
+    width: 40%;
+    height: 3rem;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 0.3rem;
+    
+}
+
+
+
 
 canvas {
     width: 100vw;
@@ -316,6 +331,23 @@ canvas {
 
 
 /* slider */
+.middle-text{
+    text-align: center;
+    padding: 3rem 0;
+    background-color: rgb(241, 241, 241);
+}
+
+.middle-text h1,
+.container-click-project h3{
+    color: rgb(94, 94, 94);
+}
+
+.container-click-project{
+    background-color: rgb(241, 241, 241);
+    text-align: center;
+    padding: 2rem 0;
+}
+
 @keyframes scroll{
     0%{
         transform: translateX(0);
@@ -333,7 +365,7 @@ canvas {
 
 .container-slider{
     height: 8rem;
-    background-color: rgb(221, 221, 221);
+    background-color: rgb(241, 241, 241);
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -358,18 +390,23 @@ canvas {
 }
 
 .container-slider .slider-track .slide{
-    width: 10rem;
-    margin-right: 5rem;
+    margin-right: 8rem;
 }
 
 .container-slider .slider-track2 .slide{
-    width: 10rem;
-    margin-left: 5rem;
+    margin-left: 8rem;
 
 }
 .container-slider .slider-track .slide h1,
 .container-slider .slider-track2 .slide h1{
     color: #1e1e1e;
+    font-size: 3rem;
+}
+
+.container-slider .slider-track .slide h1{
+    
+    color: transparent;
+    -webkit-text-stroke: 2px #1e1e1e;
 }
 
 
@@ -438,6 +475,8 @@ canvas {
 
     /* expertise */
     .container-expertise{
+        width: 100%;
+        height: 100vh;
         padding: 0 1rem;
         justify-content: space-between;
     }
