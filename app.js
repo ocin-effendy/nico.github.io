@@ -1,5 +1,6 @@
 var cursor = document.querySelector('.cursor');
 var cursorinner = document.querySelector('.cursor2');
+var seeAllProject = document.querySelector('.see-all-project');; 
 
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
@@ -18,22 +19,24 @@ document.addEventListener('mousemove', function(e){
   cursorinner.style.top = y + 'px';
 });
 
-document.addEventListener('mousedown', function(){
-  cursor.classList.add('click');
-  cursorinner.classList.add('cursorinnerhover')
-});
+// document.addEventListener('mousedown', function(){
+//   cursor.classList.add('click');
+//   cursorinner.classList.add('cursorinnerhover')
+// });
 
-document.addEventListener('mouseup', function(){
-  cursor.classList.remove('click')
-});
+// document.addEventListener('mouseup', function(){
+//   cursor.classList.remove('click')
+// });
 
 
 
 // menu event click
 var expertise = document.querySelector('.expertise');
 var project = document.querySelector('.project');
+var contact = document.querySelector('.contact');
 var expertiseSection = document.querySelector('.container-expertise')
 var projectScrollSection = document.querySelector('.container-scroll-project')
+var contactScrollSection = document.querySelector('.container-contact')
 
 
 expertise.addEventListener('click', function(){
@@ -45,6 +48,12 @@ expertise.addEventListener('click', function(){
 project.addEventListener('click', function(){
   window.scrollTo({
     top: projectScrollSection.getBoundingClientRect().top,
+    behavior: 'smooth'
+  });
+});
+contact.addEventListener('click', function(){
+  window.scrollTo({
+    top: contactScrollSection.getBoundingClientRect().top,
     behavior: 'smooth'
   });
 });
@@ -141,7 +150,7 @@ gsap.fromTo(
     opacity: 0,
     scrollTrigger: {
       scrub: 1,
-      start: "50%",
+      start: "40%",
       end: "0%",
     },
     onComplete: () => {
@@ -159,8 +168,8 @@ gsap.fromTo(
     opacity: 1,
     scrollTrigger: {
       scrub: 1,
-      start: "50%",
-      end: "58%",
+      start: "40%",
+      end: "45%",
     },
     onComplete: () => {
       gsap.to(".text-project-movie", { opacity: 0 });
@@ -179,8 +188,8 @@ gsap.fromTo(
     opacity: 1,
     scrollTrigger: {
       scrub: 1,
-      start: "60%",
-      end: "60%",
+      start: "45%",
+      end: "50%",
     },
     onComplete: () => {
       gsap.to(".text-project-todolist", { opacity: 1 });
@@ -199,3 +208,23 @@ function render() {
   context.clearRect(0, 0, canvas.width, canvas.height);
   context.drawImage(images[phone.frame], 0, 0);
 }
+
+
+// animation all project
+
+var listProject1 = document.querySelector('.content-all-project1');
+var listProject2 = document.querySelector('.content-all-project2');
+var buttonOne = document.querySelector('.button-one');
+var buttonTwo = document.querySelector('.button-two');
+var buttonThree = document.querySelector('.button-three');
+
+buttonTwo.addEventListener('click', function(){
+  listProject1.classList.add('project-hidden');
+  listProject2.classList.remove('project-hidden');
+ 
+});
+buttonOne.addEventListener('click', function(){
+  listProject2.classList.add('project-hidden');
+  listProject1.classList.remove('project-hidden');
+  
+});
