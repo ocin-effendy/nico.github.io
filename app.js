@@ -19,6 +19,32 @@ document.addEventListener('mousemove', function(e){
   cursorinner.style.top = y + 'px';
 });
 
+
+// loader 
+var loader = document.querySelector('.loader');
+onload = () =>{
+  document.body.style.overflow = "hidden";
+  let load = document.createElement('div');
+  load.textContent = "Loading";
+
+  loader.appendChild(load);
+
+  let loaded = setInterval(() => {
+    load.textContent += ".";
+    if(load.textContent.length > 10) load.textContent = "Loading.";
+
+  },1000);
+  
+  setTimeout(() => {
+    clearInterval(loaded);
+    loader.style.transform = "translateY(-100%)";
+    // loader.style.display = "none";
+    document.body.style.overflow = "auto";
+  }, 7000);
+
+
+}
+
 // document.addEventListener('mousedown', function(){
 //   cursor.classList.add('click');
 //   cursorinner.classList.add('cursorinnerhover')
@@ -169,7 +195,7 @@ gsap.fromTo(
     scrollTrigger: {
       scrub: 1,
       start: "40%",
-      end: "45%",
+      end: "46%",
     },
     onComplete: () => {
       gsap.to(".text-project-movie", { opacity: 0 });
