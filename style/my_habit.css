@@ -1,0 +1,199 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Orbitron', sans-serif; */
+}
+
+
+
+/* Hide Scrollbars But Keep Functionality */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.container{
+    overflow-x: hidden;
+}
+
+/* animation cursor */
+.cursor {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid rgb(241, 241, 241);
+    transition: all 100ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+    z-index: 999;
+}
+  
+.cursor2 {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    opacity: .3;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width .3s, height .3s, opacity .3s;
+    z-index: 999;
+}
+
+/* hero */
+.container-hero .background-hero {
+    width: 100%;
+    height: 100vh;
+}
+
+.container-hero .background-hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill; 
+}
+
+/* navigation */
+.nav{
+    background-color: transparent;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    z-index: 1;
+}
+.nav ul{
+    display: flex;
+}
+
+.nav ul li{
+    list-style: none;
+    color: rgb(221, 221, 221);
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.content-hero {
+    position: absolute;
+    top: 30%;
+    padding-left: 7rem;
+}
+
+.content-hero .app-logo{
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 2rem;
+}
+
+.content-hero .app-logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+
+}
+
+.container .hero-text{
+    color: rgb(221, 221, 221);
+    margin-bottom: 8rem;
+}
+
+.container .hero-text h1{
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.container .hero-text h2{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.content-hero .year-app {
+    color: rgb(221, 221, 221);
+}
+.content-hero .year-app h3{
+    margin-bottom: 2rem;
+}
+
+
+/* desc app  */
+
+.container-desc-app{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 10rem 7rem;
+}
+
+.cube-blue{
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    right: 2rem;
+    top: 2rem;
+}
+.cube-red{
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    left: 2rem;
+    bottom: 2rem;
+}
+
+.cube-blue img,
+.cube-red img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.content-desc-app{
+    width: 80%;
+}
+
+.content-desc-app h1{
+    color: rgb(24, 24, 24);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+
+.content-desc-app p{
+    color: rgb(66, 66, 66);
+    font-size: 1.2rem;
+}
+
+
+/* project goals */
+
+.container-project-goals{
+    width: 100%;
+}
+
+.container-project-goals h1{
+    font-size: 2rem;
+    color: rgb(24, 24, 24);
+    margin-bottom: 2rem;
+}
+.container-project-goals p{
+    color: rgb(66, 66, 66);
+    font-size: 1rem;
+}
+
+.content-project-goal{
+    text-align: center;
+    width: 70%;
+    margin: 5rem auto;
+}
+
+.image-project-goal{
+    width: 100%;
+}
+.image-project-goal img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
