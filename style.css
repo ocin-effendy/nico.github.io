@@ -605,13 +605,8 @@ canvas {
     }
 
     
-    .container .hero img{
-        object-fit: cover;
-        
-    }
     .container .hero video{
         object-fit: cover;
-        
     }
 
     .container .hero-text{
